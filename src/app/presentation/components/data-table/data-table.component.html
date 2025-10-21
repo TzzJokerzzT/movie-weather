@@ -1,0 +1,87 @@
+<div class="data-table-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Movie & Weather Data</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-tab-group
+        [selectedIndex]="selectedTabIndex()"
+        (selectedTabChange)="onTabChange($event.index)"
+      >
+        <mat-tab label="Movies">
+          <ng-container *ngTemplateOutlet="tableContent"></ng-container>
+        </mat-tab>
+        <mat-tab label="Weather">
+          <ng-container *ngTemplateOutlet="tableContent"></ng-container>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<ng-template #tableContent>
+  <div class="table-controls">
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Search</mat-label>
+      <input
+        matInput
+        [placeholder]="searchPlaceholder()"
+        [(ngModel)]="searchQuery"
+        (input)="onSearchChange($event)"
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+
+  <div class="table-wrapper">
+    <div *ngIf="isLoading()" class="loading-spinner">
+      <mat-spinner diameter="50"></mat-spinner>
+      <p>Loading data...</p>
+    </div>
+
+    <div *ngIf="!isLoading() && hasError()" class="error-message">
+      <mat-icon color="warn">error</mat-icon>
+      <p>{{ errorMessage() }}</p>
+      <button mat-raised-button color="primary" (click)="retry()">
+        <mat-icon>refresh</mat-icon>
+        Retry
+      </button>
+    </div>
+
+    <div *ngIf="!isLoading() && !hasError()">
+      <mat-table [dataSource]="getTableDataSource()" class="data-table">
+        <ng-container *ngFor="let column of columns()" [matColumnDef]="column.key">
+          <mat-header-cell *matHeaderCellDef>{{ column.label }}</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <ng-container [ngSwitch]="column.type">
+              <img
+                *ngSwitchCase="'image'"
+                [src]="getImageUrl(element[column.key])"
+                [alt]="element.title || element.cityName"
+                class="poster-image"
+                (error)="onImageError($event)"
+              />
+              <span *ngSwitchCase="'date'">{{ formatDate(element[column.key]) }}</span>
+              <span *ngSwitchCase="'number'">{{ formatNumber(element[column.key]) }}</span>
+              <span *ngSwitchDefault>{{ element[column.key] }}</span>
+            </ng-container>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns()"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns()"></mat-row>
+      </mat-table>
+
+      <mat-paginator
+        [length]="totalResults()"
+        [pageSize]="pageSize()"
+        [pageSizeOptions]="[5, 10, 20, 50]"
+        [pageIndex]="currentPage() - 1"
+        (page)="onPageChange($event)"
+        showFirstLastButtons
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</ng-template>

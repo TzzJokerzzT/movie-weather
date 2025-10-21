@@ -13,7 +13,27 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "preserve",
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@core/*": ["src/app/core/*"],
+      "@domain/*": ["src/app/core/domain/*"],
+      "@entities/*": ["src/app/core/domain/entities/*"],
+      "@repositories/*": ["src/app/core/domain/repositories/*"],
+      "@use-cases/*": ["src/app/core/domain/use-cases/*"],
+      "@infrastructure/*": ["src/app/infrastructure/*"],
+      "@presentation/*": ["src/app/presentation/*"],
+      "@components/*": ["src/app/presentation/components/*"],
+      "@pages/*": ["src/app/presentation/pages/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@constants/*": ["src/app/shared/constants/*"],
+      "@interfaces/*": ["src/app/shared/interfaces/*"],
+      "@providers/*": ["src/app/shared/providers/*"],
+      "@environment/*": ["src/environment/*"],
+      "@assets/*": ["public/assets/*"],
+      "~/*": ["src/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
