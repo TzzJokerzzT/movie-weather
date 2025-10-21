@@ -158,6 +158,7 @@ npm start
 ```
 
 **✅ ¡Listo!** La aplicación funcionará completamente:
+
 - **Películas**: Con las API keys incluidas
 - **Clima**: Con 40+ ciudades mockeadas (sin configuración adicional necesaria)
 
@@ -243,41 +244,45 @@ Si deseas obtener datos meteorológicos reales y actualizados:
 La aplicación incluye las siguientes ciudades mockeadas para pruebas y demostración:
 
 ##### 🇪🇺 Europa
-| Ciudad | País | Ciudad | País |
-|--------|------|--------|------|
-| Madrid | 🇪🇸 España | Barcelona | 🇪🇸 España |
-| London | 🇬🇧 Reino Unido | Paris | 🇫🇷 Francia |
-| Berlin | 🇩🇪 Alemania | Rome | 🇮🇹 Italia |
-| Amsterdam | 🇳🇱 Países Bajos | Vienna | 🇦🇹 Austria |
-| Prague | 🇨🇿 República Checa | Warsaw | 🇵🇱 Polonia |
-| Stockholm | 🇸🇪 Suecia | Oslo | 🇳🇴 Noruega |
-| Copenhagen | 🇩🇰 Dinamarca | Helsinki | 🇫🇮 Finlandia |
-| Lisbon | 🇵🇹 Portugal | Dublin | 🇮🇪 Irlanda |
-| Brussels | 🇧🇪 Bélgica | Zurich | 🇨🇭 Suiza |
-| Luxembourg | 🇱🇺 Luxemburgo | Monaco | 🇲🇨 Mónaco |
+
+| Ciudad     | País               | Ciudad    | País         |
+| ---------- | ------------------ | --------- | ------------ |
+| Madrid     | 🇪🇸 España          | Barcelona | 🇪🇸 España    |
+| London     | 🇬🇧 Reino Unido     | Paris     | 🇫🇷 Francia   |
+| Berlin     | 🇩🇪 Alemania        | Rome      | 🇮🇹 Italia    |
+| Amsterdam  | 🇳🇱 Países Bajos    | Vienna    | 🇦🇹 Austria   |
+| Prague     | 🇨🇿 República Checa | Warsaw    | 🇵🇱 Polonia   |
+| Stockholm  | 🇸🇪 Suecia          | Oslo      | 🇳🇴 Noruega   |
+| Copenhagen | 🇩🇰 Dinamarca       | Helsinki  | 🇫🇮 Finlandia |
+| Lisbon     | 🇵🇹 Portugal        | Dublin    | 🇮🇪 Irlanda   |
+| Brussels   | 🇧🇪 Bélgica         | Zurich    | 🇨🇭 Suiza     |
+| Luxembourg | 🇱🇺 Luxemburgo      | Monaco    | 🇲🇨 Mónaco    |
 
 ##### 🌎 Américas
-| Ciudad | País | Ciudad | País |
-|--------|------|--------|------|
-| New York | 🇺🇸 Estados Unidos | Los Angeles | 🇺🇸 Estados Unidos |
-| Chicago | 🇺🇸 Estados Unidos | Miami | 🇺🇸 Estados Unidos |
-| Toronto | 🇨🇦 Canadá | Vancouver | 🇨🇦 Canadá |
-| São Paulo | 🇧🇷 Brasil | Rio de Janeiro | 🇧🇷 Brasil |
-| Buenos Aires | 🇦🇷 Argentina | Mexico City | 🇲🇽 México |
+
+| Ciudad       | País              | Ciudad         | País              |
+| ------------ | ----------------- | -------------- | ----------------- |
+| New York     | 🇺🇸 Estados Unidos | Los Angeles    | 🇺🇸 Estados Unidos |
+| Chicago      | 🇺🇸 Estados Unidos | Miami          | 🇺🇸 Estados Unidos |
+| Toronto      | 🇨🇦 Canadá         | Vancouver      | 🇨🇦 Canadá         |
+| São Paulo    | 🇧🇷 Brasil         | Rio de Janeiro | 🇧🇷 Brasil         |
+| Buenos Aires | 🇦🇷 Argentina      | Mexico City    | 🇲🇽 México         |
 
 ##### 🌏 Asia-Pacífico
-| Ciudad | País | Ciudad | País |
-|--------|------|--------|------|
-| Tokyo | 🇯🇵 Japón | Seoul | 🇰🇷 Corea del Sur |
-| Beijing | 🇨🇳 China | Shanghai | 🇨🇳 China |
-| Mumbai | 🇮🇳 India | Delhi | 🇮🇳 India |
-| Sydney | 🇦🇺 Australia | Melbourne | 🇦🇺 Australia |
+
+| Ciudad  | País         | Ciudad    | País             |
+| ------- | ------------ | --------- | ---------------- |
+| Tokyo   | 🇯🇵 Japón     | Seoul     | 🇰🇷 Corea del Sur |
+| Beijing | 🇨🇳 China     | Shanghai  | 🇨🇳 China         |
+| Mumbai  | 🇮🇳 India     | Delhi     | 🇮🇳 India         |
+| Sydney  | 🇦🇺 Australia | Melbourne | 🇦🇺 Australia     |
 
 ##### 🌍 África
-| Ciudad | País |
-|--------|------|
-| Lagos | 🇳🇬 Nigeria |
-| Cairo | 🇪🇬 Egipto |
+
+| Ciudad | País       |
+| ------ | ---------- |
+| Lagos  | 🇳🇬 Nigeria |
+| Cairo  | 🇪🇬 Egipto  |
 
 ### 🔒 Seguridad de API Keys
 
@@ -325,7 +330,7 @@ Al acceder a `http://localhost:4200`, verás la interfaz principal con dos pesta
 ### 🎛️ Funcionalidades Interactivas
 
 1. **🔄 Cambio de pestañas**: Clic en "Movies" o "Weather"
-2. **🔍 Búsqueda inteligente**: 
+2. **🔍 Búsqueda inteligente**:
    - **Películas**: Escribe y los resultados se actualizan automáticamente
    - **Clima**: Busca entre las 40+ ciudades disponibles (ej: "Madrid", "Tokyo", "New York")
 3. **📄 Paginación**: Usa los controles inferiores para navegar
@@ -541,9 +546,9 @@ movie-weather/
 
 ---
 
-## 👨‍💻 Desarrollado por
+## 👨‍💻 Desarrollado por: Alexis Buelvas
 
-**Prueba Técnica - Angular Developer**
+**Prueba Técnica - Frontend Developer**
 
 Aplicación desarrollada siguiendo las mejores prácticas de desarrollo frontend y arquitectura limpia.
 
@@ -551,9 +556,9 @@ Aplicación desarrollada siguiendo las mejores prácticas de desarrollo frontend
 
 Si tienes preguntas o sugerencias sobre la aplicación:
 
-- 📧 Email: [tu-email@ejemplo.com]
-- 💼 LinkedIn: [tu-perfil-linkedin]
-- 🐙 GitHub: [tu-usuario-github]
+- 📧 Email: [Alexjesus-4856@hotmail.com]
+- 💼 LinkedIn: [https://www.linkedin.com/in/alexis-buelvas/]
+-  GitHub: [https://github.com/TzzJokerzzT]
 
 ---
 
