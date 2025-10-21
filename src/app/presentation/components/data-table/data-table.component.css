@@ -48,6 +48,7 @@
   height: 75px;
   object-fit: cover;
   border-radius: 4px;
+  margin: 10px 0;
 }
 
 .mat-mdc-row:hover {
